@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: tan;
+    font-family: 'Special Elite', cursive;
+  }
+
+  
+  header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #8B4513;
+  }
+  
+  h1 {
+    color: tan;
+    margin: 0;
+  }
+  
+  main {
+ 
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .control-panel {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0.25rem;
+
+  }
+  
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: tan;
+    background-color: #8B4513;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+  }
+  
+  img {
+    border-radius: 15%;
+  }
+
+  form {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+  }
+
+  input[type=text] {
+    width: 25%;
+    padding: 12px 20px;
+ 
+
+    border: 2px solid tan;
+    border-radius: 4px;
+    background-color: #8B4513;
+    font-family: 'Special Elite', cursive;
+ 
+
+    
+
+  }
+
+  .button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #8B4513;
+    border: 2px solid tan;
+    font-family: 'Special Elite', cursive;  
+
+    box-shadow: 2px 2px #8B4513;
+
+  }
+
+  .button:active {
+    background-color: gray;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+}
+
+.ptwoinstr {
+ text-align: center;
+ margin-top: 20px; 
+ margin-bottom: 40px;
+}
+
+.letter {
+  border-bottom: 3px solid black;
+  width: 15px;
+  margin-left: 15px;
+  
+
+
+}
+.container {
+  display: flex;
+  flex-direction: row;  
+  margin: auto;
+  
+  
+}
+
+
+main {
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+
+.hmpic {
+  text-align: center;
+  margin-bottom: 40px;
+}
