@@ -1,105 +1,100 @@
 let input = document.querySelector('.input')
 const button = document.querySelector('.button')
+const buttons = document.querySelectorAll('.letterb')
+var word = input.value;
+// event listener to make spaces appear after user puts their word in    
+
+button.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    var container = document.querySelector(".container");
+
+    // deletes spaces from previous word 
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 
 
-// const sample = document.querySelector(".sample");
+    // the users word 
+    var word = input.value;
 
-// button.addEventListener('click', function(evt) {
-
-       // to get input to appear on screen 
-
-//     evt.preventDefault();
-    // var paragraph = document.createElement("p")
-    // var text = document.createTextNode(input.value);
-    // paragraph.appendChild(text);
-    // sample.appendChild(paragraph);
-
-// })
-
-
-// button.addEventListener('click', function(evt) {
-
-//     to target an index in the users word 
-//     evt.preventDefault();
-//     var word = input.value
-//     var one = word.charAt(0);
+    // incrementer 
+    var i;
     
-//     var paragraph = document.createElement("p")
-//     var text = document.createTextNode(one);
-//     paragraph.appendChild(text);
-//     sample.appendChild(paragraph);
-
-// })
 
 
-// button.addEventListener('click', function(evt) {
+    for (i = 0; i < word.length; i++) { 
+
+    // create index for each letter 
+    let lix = 0
+
+    // first letter of the users word 
+    var letter = word.charAt(lix);
 
 
-//        to get length of users word 
-//     evt.preventDefault();
+    // new div for container 
+    var newDiv =  document.createElement("div");
 
-//     var word = input.value
-//     var wordLength = word.length;
+    // add new div as a child for container 
+    container.appendChild(newDiv);
     
-//     var paragraph = document.createElement("p")
-//     var text = document.createTextNode(wordLength);
-//     paragraph.appendChild(text);
-//     sample.appendChild(paragraph);
+    // give new div the letter class
+    newDiv.classList.add("letter");
 
-// })
-
-
+    // increment letter index 
+    lix++;
+    }
 
 
-   button.addEventListener('click', function(evt) {
+
+
+for (let index = 0; index < buttons.length; index++) {
+
+
+    var container = document.querySelector(".container");
+    
+    buttons[index].addEventListener('click', function(evt) {
+
         evt.preventDefault();
 
+        var target = event.target.firstChild
+        var instr = document.querySelector("ptwoinstr")
+        if (target === target) {
+            console.log(word)
+        }
 
-//         var  = document.getElementById("foo");
-// while (myNode.firstChild) {
-//     myNode.removeChild(myNode.firstChild);
-// }
+    
+
+    })
+
+    
+} 
+
+   
 
 
 
 
-        // the users word 
-        var word = input.value;
-        var i;
-        
-        for (i = 0; i < word.length; i++) { 
-
-        // create index for each letter 
-        let lix = 0
-
-        // first letter of the users word 
-        var letter = word.charAt(lix);
-
-        // the container 
-        var container = document.querySelector(".container");
-
-        // new div for container 
-        var newDiv =  document.createElement("div");
-
-        // add new div as a child for container 
-        container.appendChild(newDiv);
-        
-        // give new div the letter class
-        newDiv.classList.add("letter");
-
-        // increment letter index 
-        lix++;
-
-}
 
 })
 
 
 
 
-        //get new div out of document and save as variable
 
 
 
-        // add letter to div 
-        // newDiv.appendChild(letter);
+
+
+// test 
+// var divcontent = document.getElementsByClassName("letterb")[0].innerText;       
+// console.log(divcontent)
+
+
+// test 
+  // const sample = document.querySelector(".sample");
+                    // var paragraph = document.createElement("p")
+                    // var text = document.createTextNode("hi");
+                    // paragraph.appendChild(text);
+                    // sample.appendChild(paragraph);
+
