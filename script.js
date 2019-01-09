@@ -1,8 +1,16 @@
 let input = document.querySelector('.input')
 const button = document.querySelector('.button')
-const buttons = document.querySelectorAll('.letterb')
 var word = input.value;
+
+const buttons = document.querySelectorAll('.letterb')
+
 // event listener to make spaces appear after user puts their word in    
+
+
+
+
+
+
 
 button.addEventListener('click', function(evt) {
     evt.preventDefault();
@@ -45,23 +53,36 @@ button.addEventListener('click', function(evt) {
     lix++;
     }
 
+    var splitWord = word.split("")
+
+    // console.log(word)
+   
+
+// test split word value 
+console.log(splitWord)
+
+  
 
 
 
 for (let index = 0; index < buttons.length; index++) {
-
-
-    var container = document.querySelector(".container");
     
     buttons[index].addEventListener('click', function(evt) {
 
         evt.preventDefault();
 
         var target = event.target.firstChild
-        var instr = document.querySelector("ptwoinstr")
-        if (target === target) {
-            console.log(word)
-        }
+
+        // test target value 
+        console.log(target)
+
+        // if (splitWord[0] === target) {
+        //     console.log(true)
+        // }
+        // else {
+        //     console.log(false)
+        // }
+        
 
     
 
@@ -98,3 +119,26 @@ for (let index = 0; index < buttons.length; index++) {
                     // paragraph.appendChild(text);
                     // sample.appendChild(paragraph);
 
+   // the test below works
+        //     if (target === target) {
+        //         console.log(letter) 
+        //     }
+        //     else {
+        //         console.log("")
+        //     }
+        // }
+
+// the test below works 
+                // if (target === target) {
+                // console.log(splitWord)
+                // }
+
+
+
+// // the test below works
+// if (target === letter) {
+//     console.log(letter) 
+// }
+// else {
+//     console.log(letter)
+// }
