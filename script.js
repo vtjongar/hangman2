@@ -11,7 +11,6 @@ const buttons = document.querySelectorAll('.letterb')
 
 
 
-
 button.addEventListener('click', function(evt) {
     evt.preventDefault();
 
@@ -22,14 +21,12 @@ button.addEventListener('click', function(evt) {
         container.removeChild(container.firstChild);
     }
 
-
     // the users word 
     var word = input.value;
 
     // incrementer 
     var i;
     
-
 
     for (i = 0; i < word.length; i++) { 
 
@@ -38,7 +35,6 @@ button.addEventListener('click', function(evt) {
 
     // first letter of the users word 
     var letter = word.charAt(lix);
-
 
     // new div for container 
     var newDiv =  document.createElement("div");
@@ -49,20 +45,18 @@ button.addEventListener('click', function(evt) {
     // give new div the letter class
     newDiv.classList.add("letter");
 
+    // add empty string to div
+    var questionMark = document.createTextNode("?") 
+    newDiv.appendChild(questionMark)
+
     // increment letter index 
     lix++;
     }
 
     var splitWord = word.split("")
 
-    // console.log(word)
-   
-
-// test split word value 
-console.log(splitWord)
-
+    
   
-
 
 
 for (let index = 0; index < buttons.length; index++) {
@@ -71,18 +65,21 @@ for (let index = 0; index < buttons.length; index++) {
 
         evt.preventDefault();
 
-        var target = event.target.firstChild
+        var target = event.target.innerText
+        var divcontent = document.getElementsByClassName("letter").item(0).innerHTML;
+            
+        for (let num = 0; num < word.length; num++) {
 
-        // test target value 
-        console.log(target)
+       
+            if (splitWord[num] === target && divcontent === "?" ) { 
 
-        // if (splitWord[0] === target) {
-        //     console.log(true)
-        // }
-        // else {
-        //     console.log(false)
-        // }
+                
+                var cont = document.getElementsByClassName("container")[0];
+                cont.getElementsByClassName("letter")[num].innerHTML = target;
+            } 
+
         
+        }
 
     
 
@@ -96,9 +93,7 @@ for (let index = 0; index < buttons.length; index++) {
 
 
 
-
 })
-
 
 
 
@@ -110,7 +105,6 @@ for (let index = 0; index < buttons.length; index++) {
 // test 
 // var divcontent = document.getElementsByClassName("letterb")[0].innerText;       
 // console.log(divcontent)
-
 
 // test 
   // const sample = document.querySelector(".sample");
@@ -134,7 +128,6 @@ for (let index = 0; index < buttons.length; index++) {
                 // }
 
 
-
 // // the test below works
 // if (target === letter) {
 //     console.log(letter) 
@@ -142,3 +135,5 @@ for (let index = 0; index < buttons.length; index++) {
 // else {
 //     console.log(letter)
 // }
+
+
