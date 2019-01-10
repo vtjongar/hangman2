@@ -17,6 +17,14 @@ body {
     background-color: #8B4513;
  
   }
+
+
+  footer {
+    text-align: center;
+    padding: 35px;
+    background-color: #8B4513;
+ 
+  }
   
   h1 {
     color: tan;
@@ -27,7 +35,7 @@ body {
   main {
  
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
   }
   
   .letterbuttons {
@@ -43,7 +51,7 @@ body {
     text-decoration: none;
     color: black;
     border: 1px solid black;
-    padding: 1rem 2rem;
+    padding: 10px;
     border-radius: 20px;
     background-color: gray;
     box-shadow: 1px black;
@@ -103,17 +111,39 @@ body {
 
   #reload {
    
-    padding: 20px;
+    padding: 5px;
   
-    background-color: #8B4513;
-    border: 2px solid black;
+    background-color: gray;
+    border-top: solid black;
+    border-bottom: solid black;
+    border-left: solid gray;
+    border-right: solid gray;
     font-family: 'Special Elite', cursive;  
 
-    box-shadow: 2px 2px #8B4513;
+    /* box-shadow: 2px 2px black; */
     font-size: 15px;
-    
+    width: 75px;
+ 
     
   }
+
+  .r {
+    margin: auto;
+    width: 75px;
+    padding: 5px;
+    background-color: #8B4513;
+    border-radius: 10px;
+    box-shadow: 2px 2px #8B4513;
+    border: 2px solid gray;
+    margin-top: 50PX;
+
+
+  }
+
+  .r:active {
+    transform: translateY(5px);
+  }
+
 
   .button:active {
     background-color: gray;
@@ -124,7 +154,7 @@ body {
 #status {
  text-align: center;
  margin-top: 20px; 
- margin-bottom: 40px;
+ margin-bottom: 20px;
 }
 
 
