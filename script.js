@@ -1,135 +1,172 @@
-let input = document.querySelector('.input')
-const button = document.querySelector('.button')
-var word = input.value;
-const buttons = document.querySelectorAll('.letterb')
-// event listener to make spaces appear after user puts their word in    
-button.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    var container = document.querySelector(".container");
-    // deletes spaces from previous word 
+let input = document.querySelector('.input') // this holds the user input box
+const button = document.querySelector('.button') // this holds the button in the form 
+var word = input.value; // this holds the users word 
+const buttons = document.querySelectorAll('.letterb') // this holds all the letter buttons on the page 
+                                                            
+
+
+
+
+
+
+ 
+button.addEventListener('click', function(evt) { // this event listener is for the enter button
+    evt.preventDefault(); // this prevents page from refreshing when button is clicked 
+
+
+    var container = document.querySelector(".container"); // this holds the container that will hold the letter spaces 
+
+
+    
+    document.getElementById("img").src = "../imgs/hmone.jpg"; // this resets the hangman image 
+    document.getElementById("status").innerHTML = "Player two, guess that word!"; // this resets "GAME OVER" message
+    document.getElementById("status").style.color = "black"; // this resets text color 
+    document.getElementById("answer").innerHTML = ""; // this removes game winner message 
+    document.getElementById("answer2").innerHTML = ""; // this removes word reveal message 
+
+
+
+
     while (container.firstChild) {
-        container.removeChild(container.firstChild);
+        container.removeChild(container.firstChild);  // this deletes the letter spaces from previous word 
     }
-    // the users word 
-    var word = input.value;
-    // incrementer 
+    
+
+
+
+    var word = input.value;   // this holds the users word 
+
+
+
+
+
     var i;
-    
-    for (i = 0; i < word.length; i++) { 
-    // create index for each letter 
-    let lix = 0
-    // first letter of the users word 
-    var letter = word.charAt(lix);
-    // new div for container 
-    var newDiv =  document.createElement("div");
-    // add new div as a child for container 
-    container.appendChild(newDiv);
-    
-    // give new div the letter class
-    newDiv.classList.add("letter");
-    // add empty string to div
-    var questionMark = document.createTextNode("?") 
-    newDiv.appendChild(questionMark)
-    // increment letter index 
-    lix++;
-    }
+    for (i = 0; i < word.length; i++) { // this loop iterates through each letter in the users word and creates a letter space for it 
 
-    var splitWord = word.split("")
-
-    // var lettersCount = splitWord.length
-
-
-    // when a letter button is clicked do this 
-for (let index = 0; index < buttons.length; index++) {
-
-    buttons[index].addEventListener('click', function(evt) {
-
-        evt.preventDefault();
-
-        var target = event.target.innerText
-
- // console.log(lettersCount)
-
-
- var io = splitWord.indexOf(target);
-
- console.log(io)
- var currentImg = document.getElementById("img").src;
-console.log(currentImg)
- if (io < 0) {
-    
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmone.jpg") {
-    document.getElementById("img").src = "../imgs/hmtwo.jpg";
-    }
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmtwo.jpg") {
-    document.getElementById("img").src = "../imgs/hmthree.jpg";
-    }
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmthree.jpg") {
-    document.getElementById("img").src = "../imgs/hmfour.jpg";
-    }
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmfour.jpg") {
-    document.getElementById("img").src = "../imgs/hmfive.jpg";
-    }
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmfive.jpg") {
-    document.getElementById("img").src = "../imgs/hmsix.jpg";
-    }
-    if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") {
-    document.getElementById("img").src = "../imgs/hmsvn.jpg";
-    document.getElementById("status").innerHTML = "GAME OVER";
-    document.getElementById("status").style.color = "red";
-    document.getElementById("answer").innerHTML = "Player one wins!";
-    document.getElementById("answer2").innerHTML = "The word was:";
-
-   
-    let z = 0 
-    while(z < word.length) {
-
-        let l = word.charAt(z)
-
-        var cont = document.getElementsByClassName("container")[0];
-            cont.getElementsByClassName("letter")[z].innerHTML = l;
-    z++
-    }
+        var letter = word.charAt(i); // this holds a letter in the users word 
+        var newDiv =  document.createElement("div");     // this holds the new div for the container 
+        container.appendChild(newDiv); // this adds the new div as a child of the container
+        newDiv.classList.add("letter"); // this gives the new div the class "letter" for styling
+        var questionMark = document.createTextNode("?") // this creates a text node with the value of "?"
+        newDiv.appendChild(questionMark) // this adds the "?" to the new div 
 
     }
-  
- }
- var divcontent = document.getElementsByClassName("letter").item(io).innerHTML;
-
-
-// test to see if letter is even in word 
 
 
 
-        if (io >= 0) {
-            
-            if (divcontent === "?") {
+    var splitWord = word.split("") // this puts each letter from the users word into an array 
+
+
+
+
+        
+    for (let index = 0; index < buttons.length; index++) { // this loop iterates through to each letter button on the page 
+
+        buttons[index].addEventListener('click', function(evt) { // this adds an event listener to whatever button the loop is on 
+            evt.preventDefault();
+
+            var target = event.target.innerText
+
+
+
+
+            var io = splitWord.indexOf(target); // this holds the index of whatever letter target is equal to 
+            // test
+            // console.log(io)
+
+
+            var currentImg = document.getElementById("img").src; // this holds the image that is currently on the page 
+
+            // test 
+            // console.log(currentImg)
+
                 
+                if (io < 0) {           // if the target is not in the array its index will be less than zero 
+                                        // so statement says if this is true, do the following 
+                    
+                    
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmone.jpg") {  // this changes the current image to image two if the source says image one 
+                    document.getElementById("img").src = "../imgs/hmtwo.jpg";
+                    }
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmtwo.jpg") { // this changes the current image to image three if the source says image two 
+                    document.getElementById("img").src = "../imgs/hmthree.jpg";
+                    }
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmthree.jpg") { // this changes the current image to image four if the source says image three
+                    document.getElementById("img").src = "../imgs/hmfour.jpg";
+                    }
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmfour.jpg") { // this changes the current image to image five if the source says image four 
+                    document.getElementById("img").src = "../imgs/hmfive.jpg";
+                    }
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmfive.jpg") { // this changes the current image to image six if the source says image five 
+                    document.getElementById("img").src = "../imgs/hmsix.jpg";
+                    }
+                    if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") { 
+                    document.getElementById("img").src = "../imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
+                    document.getElementById("status").innerHTML = "GAME OVER";   // this adds game over message to the page 
+                    document.getElementById("status").style.color = "red";       // this makes the game over messages red 
+                    document.getElementById("answer").innerHTML = "Player one wins!"; // this adds the player one wins message to the page 
+                    document.getElementById("answer2").innerHTML = "The word was:";   // this adds the word reveal message to the page 
 
-                    var cont = document.getElementsByClassName("container")[0];
-                    cont.getElementsByClassName("letter")[io].innerHTML = target;
+                
+                        let z = 0 
+                        while(z < word.length) { // this loop reveals the player ones word 
 
+                            let l = word.charAt(z) // this holds a letter from player ones word depending on the index 
+
+                            var cont = document.getElementsByClassName("container")[0]; // this holds the container 
+
+                            cont.getElementsByClassName("letter")[z].innerHTML = l; // this changes the inner text of whatever div the loop is in to the corresponding letter in the users word 
+
+                            z++
+                        }
+
+                    }
+                
+                }
+
+                
+            var divcontent = document.getElementsByClassName("letter").item(io).innerHTML; // this holds the content of whatever div we're in 
+
+
+        // test to see if letter is even in word 
+
+
+
+                if (io >= 0) { // this tests to see if the target button letter is in the users word 
+                    
+                    if (divcontent === "?") { // this tests to see if the div is empty so we can add the target button letter 
+                        
+
+                            var cont = document.getElementsByClassName("container")[0]; // this holds the container 
+                            cont.getElementsByClassName("letter")[io].innerHTML = target; // this changes the inner text of whatever div the loop is in to the corresponding letter in the users word 
+
+                    
+                    }
+
+                    else { // this else is in case the same letter is already occupying that space 
+                        
+                        // test 
+                        // console.log(target)
+                        // console.log(target)
+                    
+                        var lio = splitWord.lastIndexOf(target); // this finds the last occurence of this letter 
+                        var cont = document.getElementsByClassName("container")[0]; 
+                        cont.getElementsByClassName("letter")[lio].innerHTML = target; // this changes the inner text of whatever div the loop is in to the corresponding letter index in the users word 
+
+                    }
+                }
             
-            }
 
-            else {
-                console.log(target)
-                console.log(target)
-            
-                var lio = splitWord.lastIndexOf(target);
-                var cont = document.getElementsByClassName("container")[0];
-                cont.getElementsByClassName("letter")[lio].innerHTML = target;
 
-            }
-        }
-    
 
+    })
+
+
+    } 
 
 
 })
 
-
-} 
-
-
-})
+function reloadPage() {
+    location.reload();
+  }
