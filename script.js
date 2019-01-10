@@ -54,27 +54,59 @@ for (let index = 0; index < buttons.length; index++) {
  var io = splitWord.indexOf(target);
 
  console.log(io)
-
- var divcontent = document.getElementsByClassName("letter").item(io).innerHTML;
-
- if (divcontent === "?") {
-    if (io >= 0) {
-
-        var cont = document.getElementsByClassName("container")[0];
-        cont.getElementsByClassName("letter")[io].innerHTML = target;
-
+ var currentImg = document.getElementById("img").src;
+console.log(currentImg)
+ if (io < 0) {
+    
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmone.jpg") {
+    document.getElementById("img").src = "../imgs/hmtwo.jpg";
+    }
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmtwo.jpg") {
+    document.getElementById("img").src = "../imgs/hmthree.jpg";
+    }
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmthree.jpg") {
+    document.getElementById("img").src = "../imgs/hmfour.jpg";
+    }
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmfour.jpg") {
+    document.getElementById("img").src = "../imgs/hmfive.jpg";
+    }
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmfive.jpg") {
+    document.getElementById("img").src = "../imgs/hmsix.jpg";
+    }
+    if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") {
+    document.getElementById("img").src = "../imgs/hmsvn.jpg";
     }
  }
+ var divcontent = document.getElementsByClassName("letter").item(io).innerHTML;
 
- else {
-    console.log(target)
-    console.log(target)
-  
-    var lio = splitWord.lastIndexOf(target);
-    var cont = document.getElementsByClassName("container")[0];
-    cont.getElementsByClassName("letter")[lio].innerHTML = target;
 
- }
+// test to see if letter is even in word 
+
+
+
+        if (io >= 0) {
+            
+            if (divcontent === "?") {
+                
+
+                    var cont = document.getElementsByClassName("container")[0];
+                    cont.getElementsByClassName("letter")[io].innerHTML = target;
+
+            
+            }
+
+            else {
+                console.log(target)
+                console.log(target)
+            
+                var lio = splitWord.lastIndexOf(target);
+                var cont = document.getElementsByClassName("container")[0];
+                cont.getElementsByClassName("letter")[lio].innerHTML = target;
+
+            }
+        }
+    
+
 
 
 })
