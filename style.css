@@ -96,12 +96,23 @@ body {
     transform: translateY(4px);
 }
 
-.ptwoinstr {
+#status {
  text-align: center;
  margin-top: 20px; 
  margin-bottom: 40px;
 }
 
+
+#answer {
+  text-align: center;
+  color: red;
+}
+
+
+#answer2 {
+  text-align: center;
+  color: red;
+}
 .letter {
   border-bottom: 3px solid black;
   width: 15px;

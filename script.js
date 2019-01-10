@@ -75,7 +75,24 @@ console.log(currentImg)
     }
     if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") {
     document.getElementById("img").src = "../imgs/hmsvn.jpg";
+    document.getElementById("status").innerHTML = "GAME OVER";
+    document.getElementById("status").style.color = "red";
+    document.getElementById("answer").innerHTML = "Player one wins!";
+    document.getElementById("answer2").innerHTML = "The word was:";
+
+   
+    let z = 0 
+    while(z < word.length) {
+
+        let l = word.charAt(z)
+
+        var cont = document.getElementsByClassName("container")[0];
+            cont.getElementsByClassName("letter")[z].innerHTML = l;
+    z++
     }
+
+    }
+  
  }
  var divcontent = document.getElementsByClassName("letter").item(io).innerHTML;
 
