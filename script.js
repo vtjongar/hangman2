@@ -12,7 +12,7 @@ const buttons = document.querySelectorAll('.letterb') // this holds all the lett
  
 button.addEventListener('click', function(evt) { // this event listener is for the enter button
     evt.preventDefault(); // this prevents page from refreshing when button is clicked 
-
+    
 
     var container = document.querySelector(".container"); // this holds the container that will hold the letter spaces 
 
