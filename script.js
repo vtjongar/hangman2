@@ -146,8 +146,34 @@ button.addEventListener('click', function(evt) { // this event listener is for t
 
                     }
                 }
-            
 
+
+var array = []
+for (let t = 0; t < word.length; t++) {
+
+    var c = document.getElementsByClassName("container")[0]; 
+    var cs = c.getElementsByClassName("letter")[t].innerHTML;
+
+    
+        if (word.charAt(t) === cs) {
+            
+            array.push(word.charAt(t))
+            
+            document.getElementById("status").innerHTML = "GOOD JOB!";   // this adds game over message to the page 
+            document.getElementById("status").style.color = "green";       // this makes the game over messages red 
+            document.getElementById("answer").innerHTML = "Player two wins!"; 
+            document.getElementById("answer").style.color = "green";       
+           
+    }
+    if (array.length === word.length) {
+        
+    }
+    
+    
+    
+    
+    }
+    
 
 
     })
@@ -156,8 +182,19 @@ button.addEventListener('click', function(evt) { // this event listener is for t
     } 
 
 
+
 })
+
 
 function reloadPage() {
     location.reload();
   }
+
+
+
+
+
+
+
+// test 
+// console.log(cs)

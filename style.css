@@ -15,7 +15,7 @@ body {
     text-align: center;
     padding: 1rem 0;
     background-color: #8B4513;
-    border: 2px solid black;
+ 
   }
   
   h1 {
@@ -57,14 +57,22 @@ body {
 
   img {
     border-radius: 15%;
+    -webkit-filter: grayscale(100%);
   }
 
   form {
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+  
+    margin-bottom: 100px;
  
 
+  }
+
+
+  #p1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
 
   input[type=text] {
@@ -95,14 +103,14 @@ body {
 
   #reload {
    
-    padding: 30px;
-    border-radius: 4px;
+    padding: 20px;
+  
     background-color: #8B4513;
     border: 2px solid black;
     font-family: 'Special Elite', cursive;  
 
     box-shadow: 2px 2px #8B4513;
-    font-size: 30px;
+    font-size: 15px;
     
     
   }
