@@ -55,10 +55,11 @@ button.addEventListener('click', function(evt) {
 
     var splitWord = word.split("")
 
+    // var lettersCount = splitWord.length
     
-  
+    
 
-
+// when a letter button is clicked do this 
 for (let index = 0; index < buttons.length; index++) {
     
     buttons[index].addEventListener('click', function(evt) {
@@ -66,22 +67,20 @@ for (let index = 0; index < buttons.length; index++) {
         evt.preventDefault();
 
         var target = event.target.innerText
-        var divcontent = document.getElementsByClassName("letter").item(0).innerHTML;
-            
-        for (let num = 0; num < word.length; num++) {
+        // console.log(lettersCount)
+  
 
-       
-            if (splitWord[num] === target && divcontent === "?" ) { 
+        var io = splitWord.indexOf(target);
 
-                
-                var cont = document.getElementsByClassName("container")[0];
-                cont.getElementsByClassName("letter")[num].innerHTML = target;
-            } 
+        console.log(io)
 
-        
+        if (io >= 0) {
+
+            var cont = document.getElementsByClassName("container")[0];
+                                cont.getElementsByClassName("letter")[io].innerHTML = target;
+
         }
 
-    
 
     })
 
@@ -94,46 +93,4 @@ for (let index = 0; index < buttons.length; index++) {
 
 
 })
-
-
-
-
-
-
-
-
-// test 
-// var divcontent = document.getElementsByClassName("letterb")[0].innerText;       
-// console.log(divcontent)
-
-// test 
-  // const sample = document.querySelector(".sample");
-                    // var paragraph = document.createElement("p")
-                    // var text = document.createTextNode("hi");
-                    // paragraph.appendChild(text);
-                    // sample.appendChild(paragraph);
-
-   // the test below works
-        //     if (target === target) {
-        //         console.log(letter) 
-        //     }
-        //     else {
-        //         console.log("")
-        //     }
-        // }
-
-// the test below works 
-                // if (target === target) {
-                // console.log(splitWord)
-                // }
-
-
-// // the test below works
-// if (target === letter) {
-//     console.log(letter) 
-// }
-// else {
-//     console.log(letter)
-// }
-
 
