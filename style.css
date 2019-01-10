@@ -15,11 +15,13 @@ body {
     text-align: center;
     padding: 1rem 0;
     background-color: #8B4513;
+    border: 2px solid black;
   }
   
   h1 {
     color: tan;
     margin: 0;
+    
   }
   
   main {
@@ -61,6 +63,7 @@ body {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
+ 
 
   }
 
@@ -88,6 +91,20 @@ body {
 
     box-shadow: 2px 2px #8B4513;
 
+  }
+
+  #reload {
+   
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #8B4513;
+    border: 2px solid black;
+    font-family: 'Special Elite', cursive;  
+
+    box-shadow: 2px 2px #8B4513;
+    font-size: 30px;
+    
+    
   }
 
   .button:active {

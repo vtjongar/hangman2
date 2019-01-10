@@ -17,15 +17,6 @@ button.addEventListener('click', function(evt) { // this event listener is for t
     var container = document.querySelector(".container"); // this holds the container that will hold the letter spaces 
 
 
-    
-    document.getElementById("img").src = "../imgs/hmone.jpg"; // this resets the hangman image 
-    document.getElementById("status").innerHTML = "Player two, guess that word!"; // this resets "GAME OVER" message
-    document.getElementById("status").style.color = "black"; // this resets text color 
-    document.getElementById("answer").innerHTML = ""; // this removes game winner message 
-    document.getElementById("answer2").innerHTML = ""; // this removes word reveal message 
-
-
-
 
     while (container.firstChild) {
         container.removeChild(container.firstChild);  // this deletes the letter spaces from previous word 
@@ -65,7 +56,7 @@ button.addEventListener('click', function(evt) { // this event listener is for t
         buttons[index].addEventListener('click', function(evt) { // this adds an event listener to whatever button the loop is on 
             evt.preventDefault();
 
-            var target = event.target.innerText
+            var target = event.target.innerText // this holds the text inside the element that triggered the event 
 
 
 
