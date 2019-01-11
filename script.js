@@ -3,8 +3,7 @@ const button = document.querySelector('.button') // this holds the button in the
 var word = input.value; // this holds the users word 
 const buttons = document.querySelectorAll('.letterb') // this holds all the letter buttons on the page 
                                                             
-
-
+var wrongGuesses = []
 
 
 
@@ -70,35 +69,42 @@ button.addEventListener('click', function(evt) { // this event listener is for t
 
             // test 
             // console.log(currentImg)
-
+            
                 
+    
                 if (io < 0) {           // if the target is not in the array its index will be less than zero 
                                         // so statement says if this is true, do the following 
+                                        
+                 console.log(wrongGuesses)
+                                        
+                    if (wrongGuesses.length === 0) {  // this changes the current image to image two if the source says image one 
+                    document.getElementById("img").src = "./imgs/hmtwo.JPG";
                     
+                    }
+                    if (wrongGuesses.length === 1) { // this changes the current image to image three if the source says image two 
+                    document.getElementById("img").src = "./imgs/hmthree.JPG";
+             
+                    }
+                    if (wrongGuesses.length === 2) { // this changes the current image to image four if the source says image three
+                    document.getElementById("img").src = "./imgs/hmfour.JPG";
+    
+                    }
+                    if (wrongGuesses.length === 3) { // this changes the current image to image five if the source says image four 
+                    document.getElementById("img").src = "./imgs/hmfive.JPG";
                     
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmone.jpg") {  // this changes the current image to image two if the source says image one 
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmtwo.jpg";
                     }
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmtwo.jpg") { // this changes the current image to image three if the source says image two 
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmthree.jpg";
+                    if (wrongGuesses.length === 4) { // this changes the current image to image six if the source says image five 
+                    document.getElementById("img").src = "./imgs/hmsix.JPG";
+                    
                     }
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmthree.jpg") { // this changes the current image to image four if the source says image three
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmfour.jpg";
-                    }
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmfour.jpg") { // this changes the current image to image five if the source says image four 
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmfive.jpg";
-                    }
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmfive.jpg") { // this changes the current image to image six if the source says image five 
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmsix.jpg";
-                    }
-                    if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") { 
-                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
+                    if (wrongGuesses.length === 5) { 
+                    document.getElementById("img").src = "./imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
                     document.getElementById("status").innerHTML = "GAME OVER";   // this adds game over message to the page 
                     document.getElementById("status").style.color = "#B80000";       // this makes the game over messages red 
                     document.getElementById("answer").innerHTML = "Player one wins!"; // this adds the player one wins message to the page 
                     document.getElementById("answer2").innerHTML = "The word was:";   // this adds the word reveal message to the page 
 
-                
+                    
                         let z = 0 
                         while(z < word.length) { // this loop reveals the player ones word 
 
@@ -110,9 +116,10 @@ button.addEventListener('click', function(evt) { // this event listener is for t
 
                             z++
                         }
-
+                  
                     }
-                
+                    wrongGuesses.push(target);
+                    console.log(wrongGuesses)
                 }
 
                 
