@@ -77,7 +77,7 @@ button.addEventListener('click', function(evt) { // this event listener is for t
                                         
                  console.log(wrongGuesses)
                                         
-                    if (wrongGuesses.length === 0) {  // this changes the current image to image two if the source says image one 
+                    if (wrongGuesses.length === 0) {  // this changes the current image to image two if the source says image onee
                     document.getElementById("img").src = "./imgs/hmtwo.JPG";
                     
                     }
