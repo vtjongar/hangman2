@@ -77,22 +77,22 @@ button.addEventListener('click', function(evt) { // this event listener is for t
                     
                     
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmone.jpg") {  // this changes the current image to image two if the source says image one 
-                    document.getElementById("img").src = "../imgs/hmtwo.jpg";
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmtwo.jpg";
                     }
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmtwo.jpg") { // this changes the current image to image three if the source says image two 
-                    document.getElementById("img").src = "../imgs/hmthree.jpg";
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmthree.jpg";
                     }
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmthree.jpg") { // this changes the current image to image four if the source says image three
-                    document.getElementById("img").src = "../imgs/hmfour.jpg";
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmfour.jpg";
                     }
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmfour.jpg") { // this changes the current image to image five if the source says image four 
-                    document.getElementById("img").src = "../imgs/hmfive.jpg";
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmfive.jpg";
                     }
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmfive.jpg") { // this changes the current image to image six if the source says image five 
-                    document.getElementById("img").src = "../imgs/hmsix.jpg";
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmsix.jpg";
                     }
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") { 
-                    document.getElementById("img").src = "../imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
+                    document.getElementById("img").src = "http://127.0.0.1:5500/imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
                     document.getElementById("status").innerHTML = "GAME OVER";   // this adds game over message to the page 
                     document.getElementById("status").style.color = "#B80000";       // this makes the game over messages red 
                     document.getElementById("answer").innerHTML = "Player one wins!"; // this adds the player one wins message to the page 
