@@ -26,7 +26,7 @@ body {
   }
   
   h1 {
-    color: tan;
+    color: black;
     margin: 0;
     
   }
@@ -39,7 +39,7 @@ body {
   
   .letterbuttons {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-gap: 0.25rem;
 
   }
@@ -52,7 +52,7 @@ body {
     border: 1px solid black;
     padding: 10px;
     border-radius: 20px;
-    background-color: gray;
+    background-color: #8B4513;
     box-shadow: 1px black;
   }
   
@@ -63,14 +63,14 @@ body {
   }
 
   img {
-    border-radius: 15%;
+    border-radius: 50%;
     -webkit-filter: grayscale(100%);
   }
 
   form {
     text-align: center;
   
-    margin-bottom: 100px;
+
  
 
   }
@@ -79,7 +79,7 @@ body {
   #p1 {
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 50px;
+   
   }
 
   input[type=text] {
@@ -110,9 +110,10 @@ body {
  
   .reloadbr {
     background-color: gray;
-    padding: 40px 5px 5px 5px;
+    padding-top: 20px;
     border: 1px solid gray;
     border-bottom: solid black;
+    max-height: 90px;
   }
 
   #reload {
@@ -141,7 +142,7 @@ body {
     background-color: #8B4513;
     border-radius: 10px;
     box-shadow: 2px 2px #8B4513;
-    border: 2px solid gray;
+    border: 2px solid black;
    
     margin-bottom: 50px;
 
@@ -168,13 +169,13 @@ body {
 
 #answer {
   text-align: center;
-  color: red;
+  color:#B80000;
 }
 
 
 #answer2 {
   text-align: center;
-  color: red;
+  color: 	#B80000;
 }
 .letter {
   border-bottom: 3px solid black;
@@ -187,18 +188,32 @@ body {
 .container {
   display: flex;
   flex-direction: row;  
-  margin-left: 30px;
+justify-content: center;
   
   
   
 }
 #pone {
-  margin-top: 70px;
-  margin-left: 150px;
+  background-color: gray;
+  padding-left: 50px;
+  padding-right:  75px;
+  margin-top: 200px;
+  margin-left: 75px;
+ border-radius: 25px;
+  margin-bottom: 100px;
+max-height: 225px;
 }
 #ptwo {
-  margin-left: 250px;
+  padding-left: 50px;
+  padding-right:  75px;
+  background-color: gray;
+  margin-left: 150px;
   margin-top: 50px;
+  border-radius: 25px;
+  padding-top: 15px;
+  margin-right: 150px;
+  margin-bottom: 100px;
+  max-height: 545px;
 }
 
 #split {
@@ -208,8 +223,9 @@ body {
 }
 
 main {
+  margin-left: 10px;
   margin-bottom: 100px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .hmpic {

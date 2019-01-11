@@ -94,7 +94,7 @@ button.addEventListener('click', function(evt) { // this event listener is for t
                     if (currentImg === "http://127.0.0.1:5500/imgs/hmsix.jpg") { 
                     document.getElementById("img").src = "../imgs/hmsvn.jpg";    // this changes the current image to image seven if the source says image six
                     document.getElementById("status").innerHTML = "GAME OVER";   // this adds game over message to the page 
-                    document.getElementById("status").style.color = "red";       // this makes the game over messages red 
+                    document.getElementById("status").style.color = "#B80000";       // this makes the game over messages red 
                     document.getElementById("answer").innerHTML = "Player one wins!"; // this adds the player one wins message to the page 
                     document.getElementById("answer2").innerHTML = "The word was:";   // this adds the word reveal message to the page 
 
