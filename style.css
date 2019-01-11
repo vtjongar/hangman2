@@ -22,7 +22,7 @@ body {
     text-align: center;
     padding: 35px;
     background-color: #8B4513;
-    border-top: solid black;
+    border-top: 2px solid black;
   }
   
   h1 {
@@ -69,16 +69,15 @@ body {
 
   form {
     text-align: center;
-  
-
- 
+    margin-top: 50px;
+ margin-left: 10px;
 
   }
 
 
   #p1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 20px;
    
   }
 
@@ -105,6 +104,10 @@ body {
     font-family: 'Special Elite', cursive;  
 
     box-shadow: 2px 2px #8B4513;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
 
   }
  
@@ -112,7 +115,7 @@ body {
     background-color: gray;
     padding-top: 20px;
     border: 1px solid gray;
-    border-bottom: solid black;
+    border-bottom: 2px solid black;
     max-height: 90px;
   }
 
@@ -178,7 +181,7 @@ body {
   color: 	#B80000;
 }
 .letter {
-  border-bottom: 3px solid black;
+  border-bottom: 1px solid black;
   width: 15px;
   margin-left: 15px;
   
@@ -189,46 +192,54 @@ body {
   display: flex;
   flex-direction: row;  
 justify-content: center;
+margin-bottom: 20px;
   
   
   
 }
 #pone {
+  border: 2px solid black;
   background-color: gray;
   padding-left: 50px;
   padding-right:  75px;
-  margin-top: 200px;
+  margin-top: 75px;
   margin-left: 75px;
- border-radius: 25px;
-  margin-bottom: 100px;
+
+  padding-bottom: 20px;
 max-height: 225px;
+border-bottom: 1px solid black;
+max-width: 350px;
+
 }
 #ptwo {
+
+  border: 2px solid black;
   padding-left: 50px;
   padding-right:  75px;
   background-color: gray;
-  margin-left: 150px;
-  margin-top: 50px;
-  border-radius: 25px;
+  margin-left: 75px;
+  border-top: gray;
+ padding-bottom: 10px;
   padding-top: 15px;
   margin-right: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   max-height: 545px;
+  max-width: 350px;
 }
 
 #split {
   display: flex;
-  flex-direction: row; 
+  flex-direction: column; 
+  margin-left: 415px;
  
 }
 
 main {
-  margin-left: 10px;
-  margin-bottom: 100px;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .hmpic {
   text-align: center;
-  margin-bottom: 40px;
+
 }
