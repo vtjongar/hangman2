@@ -21,3 +21,6 @@ to guess. Player two will use the keyboard on the page to guess what letters are
 ## App Improvements
 
 - Needs to reset when user enters a new word 
+- Needs to hide the word that player one typed into the input field once they click enter 
+- Needs to be responsive and mobile friendly 
+
