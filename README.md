@@ -1,4 +1,4 @@
-##Hangman
+## Tuff! Hangman
 
 ## Description
 This app was designed based on a game called Hangman. It requires two players. Player one must enter a word in the text box for player two
